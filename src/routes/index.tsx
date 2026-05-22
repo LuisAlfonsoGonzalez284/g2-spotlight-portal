@@ -16,9 +16,9 @@ export const Route = createFileRoute("/")({
 });
 
 const services = [
-  { icon: GraduationCap, title: "Capacitación", desc: "Programas in-house y abiertos en TIC, IT Frameworks e IA.", to: "/servicios" },
-  { icon: BrainCircuit, title: "Pruebas Psicométricas", desc: "Evaluaciones objetivas para selección y desarrollo de talento.", to: "/servicios" },
-  { icon: Compass, title: "Consultoría TI", desc: "Diagnóstico, implementación y auditoría de sistemas.", to: "/servicios" },
+  { icon: GraduationCap, title: "Capacitación", desc: "Catálogo in-house y abierto al público en buenas prácticas TIC, frameworks y metodologías.", to: "/servicios" },
+  { icon: BrainCircuit, title: "Gestión de Cambio", desc: "Marco para gestionar el lado humano de los cambios organizacionales.", to: "/servicios" },
+  { icon: Compass, title: "Consultoría", desc: "ISO 27001, COBIT, planeamiento estratégico de TI y auditoría de sistemas.", to: "/servicios" },
 ];
 
 const stats = [

@@ -1,38 +1,109 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
-import { Mail, MapPin, Phone, Send } from "lucide-react";
+import { Mail, MapPin, Phone, Printer, Send, Smartphone } from "lucide-react";
 import { useState } from "react";
 
 export const Route = createFileRoute("/contacto")({
   head: () => ({
     meta: [
       { title: "Contacto — G2" },
-      { name: "description", content: "Conversemos sobre tu próximo programa de capacitación o consultoría." },
+      { name: "description", content: "Sucursales en Santo Domingo y Santiago. Escríbenos a info@g2.com.do o llámanos al (809) 701-6092." },
       { property: "og:title", content: "Contacto — G2" },
-      { property: "og:description", content: "Escríbenos para diseñar tu programa a la medida." },
+      { property: "og:description", content: "Escríbenos o visítanos en Santo Domingo y Santiago." },
     ],
   }),
   component: Contacto,
 });
 
+const sucursales = [
+  {
+    city: "Santo Domingo",
+    address: "Calle Roberto Pastoriza #706, Evaristo Morales.",
+    region: "Santo Domingo, República Dominicana",
+    tel: "+1 (809) 701-6092",
+    telHref: "tel:8097016092",
+  },
+  {
+    city: "Santiago",
+    address: "Calle Onésimo Jiménez 58, Central Work, 2do nivel, local C6 y C7.",
+    region: "Santiago de los Caballeros 51102, República Dominicana",
+    tel: "+1 (809) 701-6092",
+    telHref: "tel:8097016092",
+  },
+];
+
 function Contacto() {
   const [sent, setSent] = useState(false);
   return (
     <SiteLayout>
-      <section className="container-x grid gap-16 pt-20 pb-24 md:pt-28 lg:grid-cols-[1fr_1.2fr]">
+      <section className="container-x pt-20 pb-12 md:pt-28">
+        <p className="eyebrow">Contacto</p>
+        <h1 className="text-display mt-4 max-w-4xl text-5xl text-foreground sm:text-6xl lg:text-7xl">
+          Conversemos sobre tu próximo <span className="italic text-primary">programa</span>.
+        </h1>
+      </section>
+
+      <section className="container-x pb-12">
+        <p className="eyebrow">Sucursales</p>
+        <div className="mt-5 grid gap-5 md:grid-cols-2">
+          {sucursales.map((s) => (
+            <div key={s.city} className="surface-card p-7">
+              <div className="flex items-center gap-3">
+                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-secondary text-primary">
+                  <MapPin size={18} />
+                </span>
+                <h3 className="text-display text-2xl text-foreground">{s.city}</h3>
+              </div>
+              <p className="mt-5 text-sm leading-relaxed text-muted-foreground">{s.address}</p>
+              <p className="text-sm leading-relaxed text-muted-foreground">{s.region}</p>
+              <a
+                href={s.telHref}
+                className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
+              >
+                <Phone size={14} /> {s.tel}
+              </a>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="container-x grid gap-12 pb-24 lg:grid-cols-[1fr_1.2fr]">
         <div>
-          <p className="eyebrow">Contacto</p>
-          <h1 className="text-display mt-4 text-5xl text-foreground sm:text-6xl">
-            Diseñemos tu próximo <span className="italic text-primary">programa</span>.
-          </h1>
-          <p className="mt-6 max-w-md text-lg text-muted-foreground">
-            Cuéntanos sobre tu organización y los retos que quieres resolver. Te
-            responderemos en menos de 24 horas.
-          </p>
-          <ul className="mt-10 space-y-5 text-sm">
-            <li className="flex items-center gap-3"><Mail size={18} className="text-primary" /> info@g2.com.do</li>
-            <li className="flex items-center gap-3"><Phone size={18} className="text-primary" /> +1 (809) 000-0000</li>
-            <li className="flex items-center gap-3"><MapPin size={18} className="text-primary" /> Santo Domingo, República Dominicana</li>
+          <p className="eyebrow">Teléfonos</p>
+          <ul className="mt-5 space-y-4 text-sm">
+            <li className="flex items-start gap-3">
+              <Phone size={18} className="mt-0.5 text-primary" />
+              <span>
+                <span className="block font-medium text-foreground">Central telefónica</span>
+                <a href="tel:8097016092" className="text-muted-foreground hover:text-foreground">(809) 701-6092</a>
+                <span className="text-muted-foreground"> / </span>
+                <a href="tel:8097016095" className="text-muted-foreground hover:text-foreground">(809) 701-6095</a>
+                <span className="block text-xs text-muted-foreground">Extensiones: 100, 106</span>
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <Smartphone size={18} className="mt-0.5 text-primary" />
+              <span>
+                <span className="block font-medium text-foreground">Celulares de soporte</span>
+                <a href="tel:8492684152" className="text-muted-foreground hover:text-foreground">(849) 268-4152</a>
+                <span className="text-muted-foreground"> / </span>
+                <a href="tel:8492682066" className="text-muted-foreground hover:text-foreground">(849) 268-2066</a>
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <Printer size={18} className="mt-0.5 text-primary" />
+              <span>
+                <span className="block font-medium text-foreground">Fax</span>
+                <span className="text-muted-foreground">(809) 363-4111</span>
+              </span>
+            </li>
+            <li className="flex items-start gap-3">
+              <Mail size={18} className="mt-0.5 text-primary" />
+              <span>
+                <span className="block font-medium text-foreground">Email</span>
+                <a href="mailto:info@g2.com.do" className="text-muted-foreground hover:text-foreground">info@g2.com.do</a>
+              </span>
+            </li>
           </ul>
         </div>
 
@@ -43,21 +114,26 @@ function Contacto() {
           }}
           className="surface-card grid gap-5 p-8 md:p-10"
         >
-          <div className="grid gap-5 md:grid-cols-2">
-            <Field label="Nombre" name="nombre" />
-            <Field label="Empresa" name="empresa" />
+          <div>
+            <p className="eyebrow">Envíanos un mensaje</p>
+            <p className="mt-2 text-sm text-muted-foreground">
+              Escríbenos al correo{" "}
+              <a href="mailto:info@g2.com.do" className="text-primary hover:underline">
+                info@g2.com.do
+              </a>{" "}
+              o contáctanos a través de este formulario.
+            </p>
           </div>
-          <div className="grid gap-5 md:grid-cols-2">
-            <Field label="Correo" name="email" type="email" />
-            <Field label="Teléfono" name="tel" />
-          </div>
+          <Field label="Nombre" name="nombre" />
+          <Field label="Email" name="email" type="email" />
+          <Field label="Asunto" name="asunto" />
           <div>
             <label className="eyebrow">Mensaje</label>
             <textarea
               required
               rows={5}
               className="mt-2 w-full rounded-xl border border-input bg-background px-4 py-3 text-sm outline-none transition focus:border-foreground"
-              placeholder="Cuéntanos sobre tu proyecto…"
+              placeholder="Escribe tu mensaje…"
             />
           </div>
           <button
