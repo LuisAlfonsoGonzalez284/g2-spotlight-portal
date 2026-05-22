@@ -33,19 +33,19 @@ function Nosotros() {
       <section className="container-x grid gap-12 pb-20 lg:grid-cols-[1fr_1.2fr]">
         <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
           <p>
-            <span className="font-semibold text-foreground">G2</span> es una entidad facilitadora de
-            iniciativas, programas y propuestas novedosas apoyadas en el uso de la
-            tecnología de la información.
+            <span className="font-semibold text-foreground">G2C</span>, es una entidad
+            facilitadora de iniciativas, programas y propuestas novedosas vinculadas al
+            ámbito educativo.
           </p>
           <p>
             Estos programas han motivado el interés empresarial en mejorar su
             productividad, han fortalecido el empoderamiento social y han contribuido a
-            la transformación digital del país.
+            la Transformación Digital.
           </p>
           <p>
             Estamos comprometidos con la excelencia en cada uno de nuestros servicios,
             siendo el espacio de formación y desarrollo del talento humano de las
-            empresas — desde donde transformamos el conocimiento en riqueza.
+            empresas, desde donde transformamos el conocimiento en riqueza.
           </p>
         </div>
         <div className="grid gap-4">

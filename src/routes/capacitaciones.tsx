@@ -1,73 +1,104 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
-import { Calendar, Clock, MapPin, ArrowRight } from "lucide-react";
+import { CalendarOff } from "lucide-react";
+import { useState } from "react";
 
 export const Route = createFileRoute("/capacitaciones")({
   head: () => ({
     meta: [
       { title: "Capacitaciones — Calendario G2" },
-      { name: "description", content: "Programas abiertos y certificaciones en TIC, IT Frameworks, IA y gestión de proyectos." },
+      { name: "description", content: "Calendario de capacitaciones G2. Filtra por evento y modalidad (presencial o en línea)." },
       { property: "og:title", content: "Capacitaciones — G2" },
-      { property: "og:description", content: "Calendario abierto de programas G2." },
+      { property: "og:description", content: "Calendario de capacitaciones G2." },
     ],
   }),
   component: Capacitaciones,
 });
 
-const courses = [
-  { cat: "IA", title: "Fundamentos de Inteligencia Artificial Aplicada", date: "12 Mar", duration: "24h", mode: "Virtual" },
-  { cat: "Frameworks", title: "ITIL® 4 Foundation con preparación a certificación", date: "02 Abr", duration: "16h", mode: "Híbrido" },
-  { cat: "Datos", title: "DB Performance Tuning para equipos de operaciones", date: "18 Abr", duration: "20h", mode: "Presencial" },
-  { cat: "Gestión", title: "Gestión de Proyectos con metodologías ágiles", date: "06 May", duration: "32h", mode: "Virtual" },
-  { cat: "TIC", title: "Buenas prácticas en Seguridad de la Información", date: "20 May", duration: "12h", mode: "In-house" },
-  { cat: "IA", title: "Implementación práctica de copilotos en la empresa", date: "10 Jun", duration: "18h", mode: "Virtual" },
-];
+const eventFilters = ["Todos", "Próximos", "Pasados"] as const;
+const modeFilters = ["Todos", "Presencial", "En Línea"] as const;
 
 function Capacitaciones() {
+  const [event, setEvent] = useState<(typeof eventFilters)[number]>("Todos");
+  const [mode, setMode] = useState<(typeof modeFilters)[number]>("Todos");
+
   return (
     <SiteLayout>
-      <section className="container-x pt-20 pb-10 md:pt-28">
+      <section className="container-x pt-20 pb-8 md:pt-28">
         <p className="eyebrow">Capacitaciones</p>
         <h1 className="text-display mt-4 max-w-4xl text-5xl text-foreground sm:text-6xl lg:text-7xl">
-          Calendario <span className="italic text-primary">abierto</span> de programas.
+          Calendario de <span className="italic text-primary">capacitaciones</span>.
         </h1>
-        <p className="mt-6 max-w-2xl text-lg text-muted-foreground">
-          Inscripción individual o por equipos. ¿Necesitas un programa a la medida?
-          <Link to="/contacto" className="ml-1 text-primary underline-offset-4 hover:underline">Hablemos</Link>.
-        </p>
       </section>
 
       <section className="container-x pb-24">
-        <div className="grid gap-4">
-          {courses.map((c, i) => (
-            <div
-              key={c.title}
-              className="group grid items-center gap-4 rounded-2xl border border-border bg-card p-6 transition hover:border-foreground hover:shadow-soft md:grid-cols-[80px_120px_1fr_auto_auto] md:gap-8"
-            >
-              <div className="text-display text-3xl text-muted-foreground/70">
-                {String(i + 1).padStart(2, "0")}
-              </div>
-              <div>
-                <span className="rounded-full bg-secondary px-3 py-1 text-xs font-medium text-foreground">
-                  {c.cat}
-                </span>
-              </div>
-              <h3 className="text-display text-xl text-foreground md:text-2xl">{c.title}</h3>
-              <div className="flex flex-wrap items-center gap-4 text-xs text-muted-foreground">
-                <span className="inline-flex items-center gap-1.5"><Calendar size={14} />{c.date}</span>
-                <span className="inline-flex items-center gap-1.5"><Clock size={14} />{c.duration}</span>
-                <span className="inline-flex items-center gap-1.5"><MapPin size={14} />{c.mode}</span>
-              </div>
-              <Link
-                to="/contacto"
-                className="inline-flex items-center gap-2 rounded-full bg-foreground px-4 py-2 text-xs font-medium text-background transition group-hover:bg-primary"
-              >
-                Inscribirme <ArrowRight size={14} />
-              </Link>
-            </div>
-          ))}
+        <div className="surface-card grid gap-6 p-6 md:grid-cols-2 md:p-8">
+          <FilterGroup
+            label="Filtrar por Evento"
+            options={eventFilters}
+            value={event}
+            onChange={(v) => setEvent(v as (typeof eventFilters)[number])}
+          />
+          <FilterGroup
+            label="Filtrar por Modo"
+            options={modeFilters}
+            value={mode}
+            onChange={(v) => setMode(v as (typeof modeFilters)[number])}
+          />
+        </div>
+
+        <div className="mt-10 flex flex-col items-center justify-center rounded-3xl border border-dashed border-border bg-card p-16 text-center">
+          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-secondary text-muted-foreground">
+            <CalendarOff size={24} />
+          </div>
+          <h3 className="text-display mt-6 text-2xl text-foreground">
+            No hay capacitaciones que cumplan este criterio.
+          </h3>
+          <p className="mt-3 max-w-md text-sm text-muted-foreground">
+            Próximamente publicaremos nuevas fechas. ¿Te interesa un programa a la
+            medida para tu equipo?
+          </p>
+          <Link
+            to="/contacto"
+            className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground"
+          >
+            Solicitar información
+          </Link>
         </div>
       </section>
     </SiteLayout>
+  );
+}
+
+function FilterGroup({
+  label,
+  options,
+  value,
+  onChange,
+}: {
+  label: string;
+  options: readonly string[];
+  value: string;
+  onChange: (v: string) => void;
+}) {
+  return (
+    <div>
+      <p className="eyebrow">{label}</p>
+      <div className="mt-3 flex flex-wrap gap-2">
+        {options.map((o) => (
+          <button
+            key={o}
+            onClick={() => onChange(o)}
+            className={`rounded-full border px-4 py-2 text-sm transition ${
+              value === o
+                ? "border-foreground bg-foreground text-background"
+                : "border-border bg-background text-foreground hover:border-foreground"
+            }`}
+          >
+            {o}
+          </button>
+        ))}
+      </div>
+    </div>
   );
 }
