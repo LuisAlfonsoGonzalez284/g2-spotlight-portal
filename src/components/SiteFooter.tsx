@@ -26,17 +26,18 @@ export function SiteFooter() {
         <div>
           <p className="eyebrow text-background/60">Servicios</p>
           <ul className="mt-4 space-y-2 text-sm text-background/80">
-            <li>Capacitación corporativa</li>
-            <li>Pruebas psicométricas</li>
-            <li>Consultoría TI</li>
-            <li>Auditoría de sistemas</li>
+            <li>Capacitación</li>
+            <li>Gestión de Cambio</li>
+            <li>Consultoría</li>
+            <li>Auditoría de Sistemas</li>
           </ul>
         </div>
         <div>
           <p className="eyebrow text-background/60">Contacto</p>
           <ul className="mt-4 space-y-2 text-sm text-background/80">
-            <li>Santo Domingo, R.D.</li>
-            <li>info@g2.com.do</li>
+            <li>Santo Domingo · Santiago</li>
+            <li><a href="tel:8097016092" className="hover:text-accent">(809) 701-6092</a></li>
+            <li><a href="mailto:info@g2.com.do" className="hover:text-accent">info@g2.com.do</a></li>
             <li><Link to="/contacto" className="text-accent hover:underline">Escríbenos →</Link></li>
           </ul>
         </div>
