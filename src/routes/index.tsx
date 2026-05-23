@@ -16,10 +16,11 @@ export const Route = createFileRoute("/")({
 });
 
 const services = [
-  { icon: GraduationCap, title: "Capacitación", desc: "Catálogo in-house y abierto al público en buenas prácticas TIC, frameworks y metodologías.", to: "/servicios" },
-  { icon: BrainCircuit, title: "Gestión de Cambio", desc: "Marco para gestionar el lado humano de los cambios organizacionales.", to: "/servicios" },
-  { icon: Compass, title: "Consultoría", desc: "ISO 27001, COBIT, planeamiento estratégico de TI y auditoría de sistemas.", to: "/servicios" },
+  { icon: GraduationCap, title: "Capacitación", desc: "Catálogo in-house y abierto al público en TIC, IT frameworks, metodologías, DB performance e Inteligencia Artificial.", to: "/servicios" },
+  { icon: BrainCircuit, title: "Pruebas Psicométricas", desc: "Tecnología para acceso a evaluaciones objetivas de habilidades, personalidad y aptitudes laborales.", to: "/servicios" },
+  { icon: Compass, title: "Consultoría", desc: "Sistemas de Información, controles de TI, planeamiento estratégico y auditoría de sistemas.", to: "/servicios" },
 ];
+
 
 const stats = [
   { k: "15+", v: "años elevando talento" },
