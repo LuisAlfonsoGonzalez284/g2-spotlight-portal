@@ -27,9 +27,10 @@ export function SiteFooter() {
           <p className="eyebrow text-background/60">Servicios</p>
           <ul className="mt-4 space-y-2 text-sm text-background/80">
             <li>Capacitación</li>
-            <li>Gestión de Cambio</li>
+            <li>Pruebas Psicométricas</li>
             <li>Consultoría</li>
             <li>Auditoría de Sistemas</li>
+
           </ul>
         </div>
         <div>
