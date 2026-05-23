@@ -8,10 +8,10 @@ import consult from "@/assets/service-consulting.jpg";
 export const Route = createFileRoute("/servicios")({
   head: () => ({
     meta: [
-      { title: "Servicios — G2 Capacitación, Gestión de Cambio y Consultoría" },
-      { name: "description", content: "Capacitación en buenas prácticas TIC, gestión del cambio organizacional y consultoría en sistemas de información." },
+      { title: "Servicios — G2 Capacitación, Pruebas Psicométricas y Consultoría" },
+      { name: "description", content: "Capacitación en buenas prácticas TIC e IA, tecnología para pruebas psicométricas y consultoría en sistemas de información." },
       { property: "og:title", content: "Servicios — G2" },
-      { property: "og:description", content: "Capacitación, gestión de cambio y consultoría TI." },
+      { property: "og:description", content: "Capacitación, pruebas psicométricas y consultoría TI." },
     ],
   }),
   component: Servicios,
@@ -22,39 +22,34 @@ const blocks = [
     tag: "01 · Capacitación",
     title: "Catálogo in-house y abierto al público.",
     intro:
-      "Presentamos al mercado un catálogo de capacitaciones acorde a las actualidades y necesidades del mercado; esto mediante modalidades in house y programas abiertos al público. Capacitación y consultoría en buenas prácticas en Tecnología de la Información.",
+      "Presentamos al mercado un catálogo de capacitaciones acorde a las actualidades y necesidades del mercado; esto mediante modalidades in house y programas abiertos al público.",
     image: training,
     groups: [
-      { label: "Buenas Prácticas", bullets: ["ITIL v3", "CobIT 5", "ISO 27001"] },
       {
-        label: "Metodologías",
+        label: "Áreas de formación",
         bullets: [
-          "Scrum / Agile",
-          "Ingeniería de Requerimientos",
-          "Aseguramiento de Calidad de Software",
-          "Business Continuity Plan",
-          "Management 3.0",
-          "Datawarehouse",
-          "UML",
-          "Gestión de Proyectos",
+          "Buenas prácticas en TIC",
+          "IT Frameworks",
+          "Metodologías de proyectos y gestión",
+          "DB performance",
+          "Inteligencia Artificial y componentes",
         ],
       },
     ],
   },
   {
-    tag: "02 · Gestión de Cambio",
-    title: "El lado humano del cambio organizacional.",
+    tag: "02 · Pruebas Psicométricas",
+    title: "Tecnología para acceso a pruebas psicométricas.",
     intro:
-      "La gestión del cambio organizacional es un marco para gestionar los efectos de los nuevos procesos de negocios, cambios en una estructura organizacional o cambios culturales dentro de la empresa. Lleva adelante el lado de la gestión del cambio que tiene que ver con las personas. Un enfoque sistemático es beneficioso cuando el cambio requiere que las personas aprendan nuevos comportamientos y habilidades.",
+      "Las pruebas psicométricas son herramientas estandarizadas que permiten medir de forma objetiva y cuantificable habilidades cognitivas, rasgos de personalidad, aptitudes y estados emocionales de una persona. Su utilidad principal es eliminar el sesgo y proporcionar datos confiables para la toma de decisiones.",
     image: psycho,
     groups: [
       {
-        label: "Beneficios",
+        label: "Ámbito laboral y organizacional",
         bullets: [
-          "Asienta formalmente las expectativas",
-          "Herramientas para mejorar la comunicación",
-          "Reduce malos entendidos en los equipos",
-          "Mayor aceptación y compromiso con la iniciativa de cambio",
+          "Selección de personal: identifica competencias reales, razonamiento lógico y perfil conductual del candidato.",
+          "Reducción de rotación: predice el desempeño futuro y asegura la afinidad con la cultura de la empresa.",
+          "Desarrollo interno: facilita planes de capacitación, promoción de puestos y equipos equilibrados.",
         ],
       },
     ],
@@ -69,18 +64,20 @@ const blocks = [
       {
         label: "Servicios",
         bullets: [
-          "Diagnóstico e Implementación de un Sistema de Seguridad de la Información (ISO 27001)",
-          "Diagnóstico e Implementación de un Modelo de Controles de TI basado en COBIT",
+          "Diagnóstico e Implementación de Sistemas de Información",
+          "Diagnóstico e Implementación de un Modelo de Controles de TI",
           "Planeamiento Estratégico de la Función Informática",
           "Pruebas de uso en los Sistemas de Información",
           "Diseño de Soluciones Tecnológicas",
           "Análisis y Diseño de Modelos Ejecutivos de Explotación de Información Gerencial",
+          "Encuestas",
           "Auditoría de Sistemas de Información",
         ],
       },
     ],
   },
 ];
+
 
 function Servicios() {
   return (
