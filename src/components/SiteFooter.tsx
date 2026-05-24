@@ -7,7 +7,7 @@ export function SiteFooter() {
       <div className="container-x grid gap-12 py-20 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div>
           <div className="flex items-center gap-3">
-            <img src={logo} alt="G2" className="h-10 w-auto rounded-md bg-white p-1" />
+            <img src={logo} alt="G2" className="h-12 w-auto rounded-md bg-white p-1.5" />
             <span className="text-display text-xl text-background">G2 Capacitación</span>
           </div>
           <p className="mt-6 max-w-sm text-sm leading-relaxed text-background/70">
