@@ -17,7 +17,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl">
       <div className="container-x flex h-20 items-center justify-between">
         <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="G2 Capacitación" className="h-10 w-auto rounded-md" />
+          <img src={logo} alt="G2 Capacitación" className="h-12 w-auto" />
           <span className="hidden text-display text-lg font-semibold sm:block">
             G2<span className="text-accent">.</span>
           </span>
