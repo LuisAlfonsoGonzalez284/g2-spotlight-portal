@@ -16,7 +16,7 @@ export const Route = createFileRoute("/")({
 });
 
 const services = [
-  { icon: GraduationCap, title: "Capacitación", desc: "Catálogo in-house y abierto al público en TIC, IT frameworks, metodologías, DB performance e Inteligencia Artificial.", to: "/servicios" },
+  { icon: GraduationCap, title: "Capacitación", desc: "Catálogo in-house y abierto al público en IA, Machine Learning, buenas prácticas TI (ITIL, CobIT, ISO), DB performance, BI, desarrollo de software y gestión de proyectos.", to: "/servicios" },
   { icon: BrainCircuit, title: "Pruebas Psicométricas", desc: "Tecnología para acceso a evaluaciones objetivas de habilidades, personalidad y aptitudes laborales.", to: "/servicios" },
   { icon: Compass, title: "Consultoría", desc: "Sistemas de Información, controles de TI, planeamiento estratégico y auditoría de sistemas.", to: "/servicios" },
 ];
@@ -82,11 +82,6 @@ function Home() {
                 height={1080}
                 className="aspect-[4/5] h-full w-full object-cover"
               />
-            </div>
-            <div className="absolute -bottom-6 -left-6 hidden w-64 rounded-2xl border border-border bg-card p-5 shadow-soft sm:block">
-              <p className="eyebrow">In-house · Abierto</p>
-              <p className="mt-2 text-display text-2xl text-foreground">Próxima cohorte abierta</p>
-              <p className="mt-1 text-xs text-muted-foreground">Inscripciones disponibles</p>
             </div>
           </div>
         </div>

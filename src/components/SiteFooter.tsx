@@ -36,7 +36,7 @@ export function SiteFooter() {
         <div>
           <p className="eyebrow text-background/60">Contacto</p>
           <ul className="mt-4 space-y-2 text-sm text-background/80">
-            <li>Santo Domingo · Santiago</li>
+            <li>Santo Domingo · Santiago · Punta Cana · Florida</li>
             <li><a href="tel:8097016092" className="hover:text-accent">(809) 701-6092</a></li>
             <li><a href="mailto:info@g2.com.do" className="hover:text-accent">info@g2.com.do</a></li>
             <li><Link to="/contacto" className="text-accent hover:underline">Escríbenos →</Link></li>
