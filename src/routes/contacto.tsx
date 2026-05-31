@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
-import { Mail, MapPin, Phone, Printer, Send, Smartphone } from "lucide-react";
+import { Mail, MapPin, Phone, Send, Smartphone } from "lucide-react";
 import { useState } from "react";
 
 export const Route = createFileRoute("/contacto")({
@@ -25,8 +25,22 @@ const sucursales = [
   },
   {
     city: "Santiago",
-    address: "Calle Onésimo Jiménez 58, Central Work, 2do nivel, local C6 y C7.",
+    address: "Calle Onésimo Jiménez 58, Obra Central – Plaza Camelia, 2do piso, local C2.",
     region: "Santiago de los Caballeros 51102, República Dominicana",
+    tel: "+1 (809) 701-6092",
+    telHref: "tel:8097016092",
+  },
+  {
+    city: "Punta Cana",
+    address: "Cormont Plaza II, Blvd. Turístico del Este.",
+    region: "Punta Cana 23302, República Dominicana",
+    tel: "+1 (809) 701-6092",
+    telHref: "tel:8097016092",
+  },
+  {
+    city: "Florida, EEUU",
+    address: "559 NE 46TH St. Apt. 103, 33431.",
+    region: "Boca Raton, Florida, EEUU",
     tel: "+1 (809) 701-6092",
     telHref: "tel:8097016092",
   },
@@ -78,23 +92,16 @@ function Contacto() {
                 <a href="tel:8097016092" className="text-muted-foreground hover:text-foreground">(809) 701-6092</a>
                 <span className="text-muted-foreground"> / </span>
                 <a href="tel:8097016095" className="text-muted-foreground hover:text-foreground">(809) 701-6095</a>
-                <span className="block text-xs text-muted-foreground">Extensiones: 100, 106</span>
+                <span className="block text-xs text-muted-foreground">Extensiones Santo Domingo: 100, 102–110, 112, 113 · Santiago: 200–204</span>
               </span>
             </li>
             <li className="flex items-start gap-3">
               <Smartphone size={18} className="mt-0.5 text-primary" />
               <span>
                 <span className="block font-medium text-foreground">Celulares de soporte</span>
-                <a href="tel:8492684152" className="text-muted-foreground hover:text-foreground">(849) 268-4152</a>
-                <span className="text-muted-foreground"> / </span>
                 <a href="tel:8492682066" className="text-muted-foreground hover:text-foreground">(849) 268-2066</a>
-              </span>
-            </li>
-            <li className="flex items-start gap-3">
-              <Printer size={18} className="mt-0.5 text-primary" />
-              <span>
-                <span className="block font-medium text-foreground">Fax</span>
-                <span className="text-muted-foreground">(809) 363-4111</span>
+                <span className="text-muted-foreground"> / </span>
+                <a href="tel:8492610028" className="text-muted-foreground hover:text-foreground">(849) 261-0028</a>
               </span>
             </li>
             <li className="flex items-start gap-3">

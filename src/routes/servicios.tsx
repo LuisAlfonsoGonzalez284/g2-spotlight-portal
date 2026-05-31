@@ -28,11 +28,13 @@ const blocks = [
       {
         label: "Áreas de formación",
         bullets: [
-          "Buenas prácticas en TIC",
-          "IT Frameworks",
-          "Metodologías de proyectos y gestión",
-          "DB performance",
-          "Inteligencia Artificial y componentes",
+          "Fundamentos de Inteligencia Artificial (IA)",
+          "Machine Learning (ML)",
+          "Buenas prácticas en TI (ITIL, CobIT, normas ISO, entre otros)",
+          "DB Database performance",
+          "Business Intelligence (BI) y modelos analíticos",
+          "Desarrollo de software",
+          "Gestión de proyectos — Agile / Scrum",
         ],
       },
     ],
