@@ -140,6 +140,7 @@ function Home() {
                     ))}
                   </ul>
                 )}
+              </div>
               <div className="mt-8 flex items-center justify-between">
                 <span className="text-xs text-muted-foreground">0{i + 1} / 03</span>
                 <ArrowRight size={18} className="text-foreground transition group-hover:translate-x-1" />
