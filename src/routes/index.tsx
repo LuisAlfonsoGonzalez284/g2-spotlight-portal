@@ -16,7 +16,21 @@ export const Route = createFileRoute("/")({
 });
 
 const services = [
-  { icon: GraduationCap, title: "Capacitación", desc: "Catálogo in-house y abierto al público en IA, Machine Learning, buenas prácticas TI (ITIL, CobIT, ISO), DB performance, BI, desarrollo de software y gestión de proyectos.", to: "/servicios" },
+  {
+    icon: GraduationCap,
+    title: "Capacitación",
+    desc: "Catálogo in-house y abierto al público. Presentamos al mercado un catálogo de capacitaciones acorde a las actualidades y necesidades del mercado; esto mediante modalidades in house y programas abiertos al público.",
+    to: "/servicios",
+    bullets: [
+      "Fundamentos de Inteligencia Artificial (IA)",
+      "Machine Learning (ML)",
+      "Buenas prácticas en TI (ITIL, CobIT, normas ISO, entre otros)",
+      "DB Database performance",
+      "Business Intelligence (BI) y modelos analíticos",
+      "Desarrollo de software",
+      "Gestión de proyectos — Agile / Scrum",
+    ],
+  },
   { icon: BrainCircuit, title: "Pruebas Psicométricas", desc: "Tecnología para acceso a evaluaciones objetivas de habilidades, personalidad y aptitudes laborales.", to: "/servicios" },
   { icon: Compass, title: "Consultoría", desc: "Sistemas de Información, controles de TI, planeamiento estratégico y auditoría de sistemas.", to: "/servicios" },
 ];
@@ -114,6 +128,18 @@ function Home() {
                 </div>
                 <h3 className="text-display mt-6 text-2xl text-foreground">{s.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
+                {s.bullets && (
+                  <ul className="mt-4 space-y-2">
+                    {s.bullets.map((b) => (
+                      <li key={b} className="flex items-start gap-2 text-sm text-muted-foreground">
+                        <span className="mt-1.5 flex h-3.5 w-3.5 shrink-0 items-center justify-center rounded-full bg-accent text-accent-foreground">
+                          <ArrowRight size={8} strokeWidth={3} />
+                        </span>
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
               <div className="mt-8 flex items-center justify-between">
                 <span className="text-xs text-muted-foreground">0{i + 1} / 03</span>
