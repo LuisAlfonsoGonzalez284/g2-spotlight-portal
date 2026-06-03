@@ -18,8 +18,8 @@ export const Route = createFileRoute("/")({
 const services = [
   {
     icon: GraduationCap,
-    title: "Catálogo In-house",
-    desc: "Catálogo in-house y abierto al público. Presentamos al mercado un catálogo de capacitaciones acorde a las actualidades y necesidades del mercado; esto mediante modalidades in house y programas abiertos al público.",
+    title: "Catálogo In-house y abierto al público",
+    desc: "Presentamos al mercado una oferta de formaciones actualizadas y alineadas a las necesidades empresariales, disponibles bajo modalidades cerradas para tu organización o sesiones abiertas para participantes individuales.",
     to: "/servicios",
     bullets: [
       "Fundamentos de Inteligencia Artificial (IA)",
