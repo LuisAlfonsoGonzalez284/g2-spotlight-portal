@@ -18,7 +18,7 @@ export const Route = createFileRoute("/")({
 const services = [
   {
     icon: GraduationCap,
-    title: "Capacitación",
+    title: "Catálogo In-house",
     desc: "Catálogo in-house y abierto al público. Presentamos al mercado un catálogo de capacitaciones acorde a las actualidades y necesidades del mercado; esto mediante modalidades in house y programas abiertos al público.",
     to: "/servicios",
     bullets: [
