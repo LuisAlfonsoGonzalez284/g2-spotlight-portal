@@ -128,7 +128,18 @@ function Home() {
                 </div>
                 <h3 className="text-display mt-6 text-2xl text-foreground">{s.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
-              </div>
+                {s.bullets && (
+                  <ul className="mt-4 space-y-2">
+                    {s.bullets.map((b) => (
+                      <li key={b} className="flex items-start gap-2 text-sm text-muted-foreground">
+                        <span className="mt-1.5 flex h-3.5 w-3.5 shrink-0 items-center justify-center rounded-full bg-accent text-accent-foreground">
+                          <ArrowRight size={8} strokeWidth={3} />
+                        </span>
+                        <span>{b}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
               <div className="mt-8 flex items-center justify-between">
                 <span className="text-xs text-muted-foreground">0{i + 1} / 03</span>
                 <ArrowRight size={18} className="text-foreground transition group-hover:translate-x-1" />
