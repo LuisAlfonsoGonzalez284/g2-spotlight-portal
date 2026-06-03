@@ -16,7 +16,21 @@ export const Route = createFileRoute("/")({
 });
 
 const services = [
-  { icon: GraduationCap, title: "Capacitación", desc: "Catálogo in-house y abierto al público en IA, Machine Learning, buenas prácticas TI (ITIL, CobIT, ISO), DB performance, BI, desarrollo de software y gestión de proyectos.", to: "/servicios" },
+  {
+    icon: GraduationCap,
+    title: "Capacitación",
+    desc: "Catálogo in-house y abierto al público. Presentamos al mercado un catálogo de capacitaciones acorde a las actualidades y necesidades del mercado; esto mediante modalidades in house y programas abiertos al público.",
+    to: "/servicios",
+    bullets: [
+      "Fundamentos de Inteligencia Artificial (IA)",
+      "Machine Learning (ML)",
+      "Buenas prácticas en TI (ITIL, CobIT, normas ISO, entre otros)",
+      "DB Database performance",
+      "Business Intelligence (BI) y modelos analíticos",
+      "Desarrollo de software",
+      "Gestión de proyectos — Agile / Scrum",
+    ],
+  },
   { icon: BrainCircuit, title: "Pruebas Psicométricas", desc: "Tecnología para acceso a evaluaciones objetivas de habilidades, personalidad y aptitudes laborales.", to: "/servicios" },
   { icon: Compass, title: "Consultoría", desc: "Sistemas de Información, controles de TI, planeamiento estratégico y auditoría de sistemas.", to: "/servicios" },
 ];
