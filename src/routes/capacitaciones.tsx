@@ -28,7 +28,7 @@ function Capacitaciones() {
   return (
     <SiteLayout>
       <section className="container-x pt-20 pb-8 md:pt-28">
-        <p className="eyebrow">Capacitaciones</p>
+        
         <h1 className="text-display mt-4 max-w-4xl text-5xl text-foreground sm:text-6xl lg:text-7xl">
           Catálogo <span className="italic text-primary">In-house</span>
         </h1>
