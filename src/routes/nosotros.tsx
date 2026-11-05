@@ -33,7 +33,7 @@ function Nosotros() {
       <section className="container-x grid gap-12 pb-20 lg:grid-cols-[1fr_1.2fr]">
         <div className="space-y-6 text-lg leading-relaxed text-muted-foreground">
           <p>
-            <span className="font-semibold text-foreground">G2C</span>, es una entidad
+            <span className="font-semibold text-foreground">G2</span>, es una entidad
             facilitadora de iniciativas, programas y propuestas novedosas vinculadas al
             ámbito educativo.
           </p>
