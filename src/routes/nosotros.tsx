@@ -5,7 +5,7 @@ import { Target, Heart, Zap } from "lucide-react";
 export const Route = createFileRoute("/nosotros")({
   head: () => ({
     meta: [
-      { title: "Nosotros — G2 Capacitación" },
+      { title: "Nosotros — G2 Proyectos" },
       { name: "description", content: "G2 es una entidad facilitadora de iniciativas y programas novedosos apoyados en tecnología de la información." },
       { property: "og:title", content: "Nosotros — G2" },
       { property: "og:description", content: "Comprometidos con la excelencia, transformando conocimiento en riqueza." },
