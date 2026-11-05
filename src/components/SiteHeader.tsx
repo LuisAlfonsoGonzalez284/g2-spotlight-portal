@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/g2-logo.png";
+import logoAsset from "@/assets/g2-logo.png.asset.json";
 
 const links = [
   { to: "/", label: "Inicio" },
