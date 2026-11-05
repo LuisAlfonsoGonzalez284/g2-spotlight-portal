@@ -8,7 +8,7 @@ import consult from "@/assets/service-consulting.jpg";
 export const Route = createFileRoute("/servicios")({
   head: () => ({
     meta: [
-      { title: "Servicios — G2 Capacitación, Pruebas Psicométricas y Consultoría" },
+      { title: "Servicios — G2 Proyectos, Pruebas Psicométricas y Consultoría" },
       { name: "description", content: "Capacitación en buenas prácticas TIC e IA, tecnología para pruebas psicométricas y consultoría en sistemas de información." },
       { property: "og:title", content: "Servicios — G2" },
       { property: "og:description", content: "Capacitación, pruebas psicométricas y consultoría TI." },

@@ -8,7 +8,7 @@ export function SiteFooter() {
         <div>
           <div className="flex items-center gap-3">
             <img src={logoAsset.url} alt="G2" className="h-16 w-auto rounded-md bg-white p-2" />
-            <span className="text-display text-xl text-background">G2 Capacitación</span>
+            <span className="text-display text-xl text-background">G2 Proyectos</span>
           </div>
           <p className="mt-6 max-w-sm text-sm leading-relaxed text-background/70">
             Transformamos el conocimiento en riqueza. Capacitación, consultoría y
