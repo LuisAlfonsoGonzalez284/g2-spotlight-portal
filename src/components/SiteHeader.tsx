@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logoAsset from "@/assets/g2-logo.png.asset.json";
+import logo from "@/assets/g2-logo-proyectos.png";
 
 const links = [
   { to: "/", label: "Inicio" },
@@ -17,7 +17,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl">
       <div className="container-x flex h-20 items-center justify-between">
         <Link to="/" className="flex items-center gap-3">
-          <img src={logoAsset.url} alt="G2" className="h-14 w-auto" />
+          <img src={logo} alt="G2" className="h-14 w-auto" />
           <span className="hidden text-display text-lg font-semibold sm:block">
             G2<span className="text-accent">.</span>
           </span>
